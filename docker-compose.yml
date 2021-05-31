@@ -3,9 +3,7 @@ version: '3.4'
 services:
   shoppingcart:
     ports:
-      - "80"
-    networks:
-      - shopping-cart-backend
+      - "8099:80"
     image: ${DOCKER_REGISTRY-}shoppingcart
     build:
       context: .
@@ -18,15 +16,12 @@ services:
     environment:
       - ACCEPT_EULA=Y
     ports:
-      - "5341:80" # UI
+     - "5341:80" # UI
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     environment:
        SA_PASSWORD: "1Secure*Password1#"
        ACCEPT_EULA: "Y"
-networks:
-  shopping-cart-backend:
-    external: true
   #dockersqlserver:
   #  image: ${DOCKER_REGISTRY-}dockersqlserver
   #  build:
