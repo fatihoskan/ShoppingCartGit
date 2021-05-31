@@ -16,7 +16,7 @@ services:
     environment:
       - ACCEPT_EULA=Y
     ports:
-     - "5341:80" # UI
+      - "8098:80" # UI
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     environment:
