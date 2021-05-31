@@ -48,10 +48,11 @@ namespace ShoppingCart.Common.Middlewares
             {
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 logger.Warning($"ServiceException - Message: {exception.Message}");
-                var serviceExceptionResponse = new BaseResponse()
+                var serviceExceptionResponse = new Res()
                 {
                     Code = ErrorCodes.Failure,
-                    Message = exception.Message
+                    Message = exception.Message,
+                    Data = null
                 };
                 await context.Response.WriteAsync(JsonConvert.SerializeObject(serviceExceptionResponse, serializeOptions), Encoding.UTF8);
                 return;

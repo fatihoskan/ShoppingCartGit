@@ -36,6 +36,13 @@ namespace ShoppingCart.Services
                 throw new ServiceException($"missingproductid");
             }
 
+            if (request.SessionId == null || request.SessionId == Guid.Empty)
+            {
+                logger.Error($"session id cannot be null");
+                throw new ServiceException("sessionidcannotbenull");
+            }
+
+
             var product = await dbContext.Products.SingleOrDefaultAsync(x => x.Id == request.ProductId);
 
             if (product == null)
@@ -50,15 +57,7 @@ namespace ShoppingCart.Services
                 throw new ServiceException($"insufficientproductcount");
             }
 
-            Cart cart = null;
-
-            if (request.SessionId == null || request.SessionId == Guid.Empty)
-            {
-                logger.Error($"session id cannot be null");
-                throw new ServiceException("sessionidcannotbenull");
-            }
-
-            cart = await dbContext.Carts.SingleOrDefaultAsync(x => x.SessionId == request.SessionId);
+            Cart cart = await dbContext.Carts.SingleOrDefaultAsync(x => x.SessionId == request.SessionId);
 
             if (cart != null)
             {

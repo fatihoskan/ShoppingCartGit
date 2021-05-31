@@ -74,6 +74,16 @@ namespace ShoppingCart.Db.Extensions
 
             dbContext.Products.AddRange(new List<Product>() { product3, product2, product });
 
+            Cart cart = new Cart
+            {
+                SessionId = Guid.Parse("e56d2f23-536c-474c-b3f0-eb046fde66e0"),
+                UserId = Guid.Parse("21F48D20-06E7-47DC-8FF0-E93FE1E70A7C"),
+                Status = Common.Enums.CartStatus.Active,
+                TotalPrice = 100
+            };
+
+            dbContext.Carts.Add(cart);
+
             dbContext.SaveChanges();
 
             /*
