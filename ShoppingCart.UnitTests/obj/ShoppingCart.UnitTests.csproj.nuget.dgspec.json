@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj": {}
+    "C:\\LocalProjects\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj": {}
   },
   "projects": {
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
+    "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj",
+        "projectUniqueName": "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj",
         "projectName": "ShoppingCart.Common",
-        "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj",
-        "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
-        "outputPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\obj\\",
+        "projectPath": "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj",
+        "packagesPath": "C:\\Users\\foskan\\.nuget\\packages\\",
+        "outputPath": "C:\\LocalProjects\\ShoppingCart.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\foskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://bmgsjenkins.borusan.com/nuget/test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -129,20 +127,17 @@
         }
       }
     },
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
+    "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj",
+        "projectUniqueName": "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj",
         "projectName": "ShoppingCart.Db",
-        "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj",
-        "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
-        "outputPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\obj\\",
+        "projectPath": "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj",
+        "packagesPath": "C:\\Users\\foskan\\.nuget\\packages\\",
+        "outputPath": "C:\\LocalProjects\\ShoppingCart.Db\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\foskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,14 +145,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://bmgsjenkins.borusan.com/nuget/test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
               }
             }
           }
@@ -190,20 +186,17 @@
         }
       }
     },
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
+    "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
+        "projectUniqueName": "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
         "projectName": "ShoppingCart.Services",
-        "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
-        "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
-        "outputPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\obj\\",
+        "projectPath": "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj",
+        "packagesPath": "C:\\Users\\foskan\\.nuget\\packages\\",
+        "outputPath": "C:\\LocalProjects\\ShoppingCart.Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\foskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,17 +204,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://bmgsjenkins.borusan.com/nuget/test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
               },
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj"
               }
             }
           }
@@ -254,20 +248,17 @@
         }
       }
     },
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj": {
+    "C:\\LocalProjects\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Interviews\\ShoppingCart\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj",
+        "projectUniqueName": "C:\\LocalProjects\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj",
         "projectName": "ShoppingCart.UnitTests",
-        "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
-        "outputPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.UnitTests\\obj\\",
+        "projectPath": "C:\\LocalProjects\\ShoppingCart.UnitTests\\ShoppingCart.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\foskan\\.nuget\\packages\\",
+        "outputPath": "C:\\LocalProjects\\ShoppingCart.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\foskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -275,17 +266,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://bmgsjenkins.borusan.com/nuget/test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj"
               },
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj"
+              "C:\\LocalProjects\\ShoppingCart\\ShoppingCart.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart\\ShoppingCart.csproj"
               }
             }
           }
@@ -356,20 +348,17 @@
         }
       }
     },
-    "D:\\Interviews\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj": {
+    "C:\\LocalProjects\\ShoppingCart\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Interviews\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\LocalProjects\\ShoppingCart\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart\\ShoppingCart.csproj",
-        "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
-        "outputPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart\\obj\\",
+        "projectPath": "C:\\LocalProjects\\ShoppingCart\\ShoppingCart.csproj",
+        "packagesPath": "C:\\Users\\foskan\\.nuget\\packages\\",
+        "outputPath": "C:\\LocalProjects\\ShoppingCart\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\foskan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -377,20 +366,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://bmgsjenkins.borusan.com/nuget/test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Common\\ShoppingCart.Common.csproj"
               },
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db\\ShoppingCart.Db.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Db\\ShoppingCart.Db.csproj"
               },
-              "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
-                "projectPath": "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services\\ShoppingCart.Services.csproj"
+              "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj": {
+                "projectPath": "C:\\LocalProjects\\ShoppingCart.Services\\ShoppingCart.Services.csproj"
               }
             }
           }

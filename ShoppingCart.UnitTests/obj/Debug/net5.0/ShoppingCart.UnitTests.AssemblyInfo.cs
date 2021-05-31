@@ -11,10 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Interviews\\ShoppingCart\\ShoppingCart.Common", "ShoppingCart.Common.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Db, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Interviews\\ShoppingCart\\ShoppingCart.Db", "ShoppingCart.Db.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Interviews\\ShoppingCart\\ShoppingCart", "ShoppingCart.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "D:\\Interviews\\ShoppingCart\\ShoppingCart.Services", "ShoppingCart.Services.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Common", "C:\\LocalProjects\\ShoppingCart.Common", "ShoppingCart.Common.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Db, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\LocalProjects\\ShoppingCart.Db", "ShoppingCart.Db.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\LocalProjects\\ShoppingCart", "ShoppingCart.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ShoppingCart.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\LocalProjects\\ShoppingCart.Services", "ShoppingCart.Services.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShoppingCart.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

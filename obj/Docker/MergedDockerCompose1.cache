@@ -18,40 +18,14 @@ services:
       target: 80
   shoppingcart:
     build:
-      context: D:\Interviews\ShoppingCart
+      context: C:\LocalProjects
       dockerfile: ShoppingCart/Dockerfile
-      labels:
-        com.microsoft.created-by: visual-studio
-        com.microsoft.visual-studio.project-name: ShoppingCart
-      target: base
-    container_name: ShoppingCart
     depends_on:
       db:
         condition: service_started
-    entrypoint: tail -f /dev/null
-    environment:
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      DOTNET_USE_POLLING_FILE_WATCHER: '1'
-      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
-    image: shoppingcart:dev
-    labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
-        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/ShoppingCart.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
-        dotnet); then kill $$PID; fi"
-      com.microsoft.visualstudio.debuggee.program: dotnet
-      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    image: shoppingcart
     networks:
       shopping-cart-backend: {}
     ports:
     - target: 80
-    tty: true
-    volumes:
-    - D:\Interviews\ShoppingCart\ShoppingCart:/app:rw
-    - C:\Users\fatih\vsdbg\vs2017u5:/remote_debugger:rw
-    - C:\Users\fatih\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
-    - C:\Users\fatih\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
-    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
-    - C:\Users\fatih\.nuget\packages:/root/.nuget/packages:ro
-    - D:\Interviews\ShoppingCart:/src:rw
 version: '3.4'

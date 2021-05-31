@@ -1,0 +1,55 @@
+networks:
+  shopping-cart-backend:
+    external: true
+    name: shopping-cart-backend
+services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: 1Secure*Password1#
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  seq.logging:
+    container_name: seq.logging
+    environment:
+      ACCEPT_EULA: "Y"
+    image: datalust/seq
+    ports:
+    - published: 5341
+      target: 80
+  shoppingcart:
+    build:
+      context: C:\LocalProjects
+      dockerfile: ShoppingCart/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ShoppingCart
+      target: base
+    container_name: ShoppingCart
+    depends_on:
+      db:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: shoppingcart:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/ShoppingCart.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      shopping-cart-backend: {}
+    ports:
+    - target: 80
+    tty: true
+    volumes:
+    - C:\LocalProjects\ShoppingCart:/app:rw
+    - C:\Users\foskan\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\foskan\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\foskan\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\foskan\.nuget\packages:/root/.nuget/packages:ro
+    - C:\LocalProjects:/src:rw
+version: '3.4'
