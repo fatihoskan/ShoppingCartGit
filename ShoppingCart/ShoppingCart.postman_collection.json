@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "ce706024-ede5-4907-b3c7-40468e2d5f57",
+		"name": "ShoppingCart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sessionidcannotbenull",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmF0aWggw5Zza2FuIiwiaWF0IjoxNTE2MjM5MDIyLCJ1bmlxdWVfbmFtZSI6IjY4MTMyNWQxLTc4NTgtNDNmMC05OWJiLTBlYTI5Mjk0MDQ5MiIsImVtYWlsIjoiZmF0aWhvc2thbkBnbWFpbC5jb20ifQ.SMs9LzNgYQHOsQQncrXGUHRYmfWLMsicoIauYT02ABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductId\": \"C3EA27F3-0EBB-4A8C-8009-7F13D5628CEE\",\r\n    \"Count\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "missingproductid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmF0aWggw5Zza2FuIiwiaWF0IjoxNTE2MjM5MDIyLCJ1bmlxdWVfbmFtZSI6IjY4MTMyNWQxLTc4NTgtNDNmMC05OWJiLTBlYTI5Mjk0MDQ5MiIsImVtYWlsIjoiZmF0aWhvc2thbkBnbWFpbC5jb20ifQ.SMs9LzNgYQHOsQQncrXGUHRYmfWLMsicoIauYT02ABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SessionId\" : \"e56d2f23-536c-474c-b3f0-eb046fde66e0\",\r\n    \"Count\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productnotfound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmF0aWggw5Zza2FuIiwiaWF0IjoxNTE2MjM5MDIyLCJ1bmlxdWVfbmFtZSI6IjY4MTMyNWQxLTc4NTgtNDNmMC05OWJiLTBlYTI5Mjk0MDQ5MiIsImVtYWlsIjoiZmF0aWhvc2thbkBnbWFpbC5jb20ifQ.SMs9LzNgYQHOsQQncrXGUHRYmfWLMsicoIauYT02ABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SessionId\" : \"e56d2f23-536c-474c-b3f0-eb046fde66e0\",\r\n    \"ProductId\" : \"be9078b7-769c-4978-9b1d-14b1bf899049\",\r\n    \"Count\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insufficientproductcount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjY0ZjgzZjg1LTIzOGUtNGEzYy1iOWMyLWMzMzc2ZjkyNmRjNiIsImVtYWlsIjoiZm9za2FuQGJvcnVzYW4uY29tIiwidG9rZW5fc291cmNlIjoiTW9iaWxlIiwibmJmIjoxNjIyMjkwOTA4LCJleHAiOjE2MjI1MDY5MDgsImlhdCI6MTYyMjI5MDkwOCwiaXNzIjoiaHR0cHM6Ly9ib3J1c2FuY2F0LmNvbS8ifQ.G4GyrN1EP1zfaCjdNd8ns6QxpR86gvd5NDUVFV9_Nvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SessionId\" : \"e56d2f23-536c-474c-b3f0-eb046fde66e0\",\r\n    \"ProductId\" : \"5D9BB3BC-84B2-45D9-9FDC-E6A4C28D541E\",\r\n    \"Count\":3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cartisnotbelongtocurrentuser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmF0aWggw5Zza2FuIiwiaWF0IjoxNTE2MjM5MDIyLCJ1bmlxdWVfbmFtZSI6IjY4MTMyNWQxLTc4NTgtNDNmMC05OWJiLTBlYTI5Mjk0MDQ5MiIsImVtYWlsIjoiZmF0aWhvc2thbkBnbWFpbC5jb20ifQ.SMs9LzNgYQHOsQQncrXGUHRYmfWLMsicoIauYT02ABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SessionId\" : \"e56d2f23-536c-474c-b3f0-eb046fde66e0\",\r\n    \"ProductId\" : \"5D9BB3BC-84B2-45D9-9FDC-E6A4C28D541E\",\r\n    \"Count\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "succesful request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmF0aWggw5Zza2FuIiwiaWF0IjoxNTE2MjM5MDIyLCJ1bmlxdWVfbmFtZSI6IjY4MTMyNWQxLTc4NTgtNDNmMC05OWJiLTBlYTI5Mjk0MDQ5MiIsImVtYWlsIjoiZmF0aWhvc2thbkBnbWFpbC5jb20ifQ.SMs9LzNgYQHOsQQncrXGUHRYmfWLMsicoIauYT02ABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SessionId\" : \"5D9BB3BC-84B2-45D9-9FDC-E6A4C28D541E\",\r\n    \"ProductId\" : \"7C124CFB-5578-4232-8D44-16C20B5FBF46\",\r\n    \"Count\": 2\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8099/cart/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"cart",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
