@@ -28,13 +28,5 @@ namespace ShoppingCart.Controllers
 
             return OOk(response);
         }
-
-        [AllowAnonymous]
-        [HttpGet("test")]
-        public async Task<IActionResult> Get()
-        {
-            return OOk("hello");
-        }
-
     }
 }

@@ -58,7 +58,7 @@ namespace ShoppingCart.Common.Middlewares
                 return;
             }
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-            await logger.FatalAsync(context, exception);
+            logger.Fatal(context, exception);
             var exceptionResponse = new BaseResponse()
             {
                 Code = ErrorCodes.Failure,

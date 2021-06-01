@@ -16,7 +16,7 @@ namespace ShoppingCart.Common.Logging
 
         void Error(string message, Exception exception = null, IDictionary<string, string> properties = null);
 
-        Task FatalAsync(HttpContext context, Exception exception);
+        void Fatal(HttpContext context, Exception exception);
 
         Task CreateHttpLogAsync(HttpContext context, TimeSpan timeElapsed, bool ignoreRequestData, ControllerActionDescriptor controllerActionDescriptor, Exception exception = null);
 

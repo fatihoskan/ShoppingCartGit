@@ -10,22 +10,18 @@ services:
       dockerfile: ShoppingCart/Dockerfile
     depends_on:
       - db
-  seq.logging:
+    links:
+      - seq 
+  seq:
     image: datalust/seq
-    container_name: seq.logging
+    container_name: seq
     environment:
       - ACCEPT_EULA=Y
     ports:
       - "8098:80" # UI
+      - "5341:5341" # Ingest
   db:
     image: "mcr.microsoft.com/mssql/server:2017-latest"
     environment:
        SA_PASSWORD: "1Secure*Password1#"
        ACCEPT_EULA: "Y"
-  #dockersqlserver:
-  #  image: ${DOCKER_REGISTRY-}dockersqlserver
-  #  build:
-  #    context: .
-  #    dockerfile: DockerSqlServer/Dockerfile
-  #  depends_on:
-  #    - db

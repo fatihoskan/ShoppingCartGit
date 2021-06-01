@@ -97,10 +97,6 @@ namespace ShoppingCart.Common.Extensions
             return services;
         }
 
-        public static string GetPathBase(this IConfiguration config)
-        {
-            return config["PathBase"];
-        }
 
         public static string GetAppName(this IConfiguration config)
         {

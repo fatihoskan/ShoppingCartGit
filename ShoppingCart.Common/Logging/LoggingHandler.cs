@@ -87,13 +87,13 @@ namespace ShoppingCart.Common.Logging
             }
         }
 
-        public async Task FatalAsync(HttpContext context, Exception exception)
+        public void Fatal(HttpContext context, Exception exception)
         {
             LogContext.PushProperty("ResponseCode", 500);
             logger.LogCritical(exception, "{Environment} - {AppName} - {Message}", environmentName, appName, exception.Message);
 
-            //eğer ihtiyaç duyulursa verilecek bir slack adresine log iletilebilir...
-            // await ForwardAsync(context, exception);
+            //  eğer ihtiyaç duyulursa verilecek bir slack adresine log iletilebilir...
+            //  mail atılabilir..
         }
 
         public string MaskSensitiveData(string data)

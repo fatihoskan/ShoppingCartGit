@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Serilog;
 using ShoppingCart.Common.Extensions;
 using System;
@@ -37,7 +38,9 @@ namespace ShoppingCart
                .ConfigureWebHostDefaults(webBuilder =>
                {
                    webBuilder.UseStartup<Startup>();
-               });
+               })
+            .ConfigureLogging(config => config.ClearProviders())
+            .UseSerilog();
 
     }
 }

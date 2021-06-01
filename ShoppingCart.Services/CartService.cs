@@ -32,13 +32,13 @@ namespace ShoppingCart.Services
         {
             if (request.ProductId == null || request.ProductId == Guid.Empty)
             {
-                logger.Error($"missing product id");
+                logger.Information($"missing product id");
                 throw new ServiceException($"missingproductid");
             }
 
             if (request.SessionId == null || request.SessionId == Guid.Empty)
             {
-                logger.Error($"session id cannot be null");
+                logger.Information($"session id cannot be null");
                 throw new ServiceException("sessionidcannotbenull");
             }
 
@@ -47,13 +47,13 @@ namespace ShoppingCart.Services
 
             if (product == null)
             {
-                logger.Error($"product not found with the given id. productid : {request.ProductId}");
+                logger.Information($"product not found with the given id. productid : {request.ProductId}");
                 throw new ServiceException($"productnotfound");
             }
 
             if (product.Count < request.Count)
             {
-                logger.Error($"insufficient product count. product.Count : {request.ProductId} - requested count : {request.Count}");
+                logger.Information($"insufficient product count. product.Count : {request.ProductId} - requested count : {request.Count}");
                 throw new ServiceException($"insufficientproductcount");
             }
 
@@ -65,7 +65,7 @@ namespace ShoppingCart.Services
                 {
                     if (cart.UserId != null && cart.UserId != Guid.Empty && cart.UserId != currentUser.Id)
                     {
-                        logger.Error($"cart is not belong to current user. current user : {currentUser.Id}");
+                        logger.Information($"cart is not belong to current user. current user : {currentUser.Id}");
                         throw new ServiceException($"cartisnotbelongtocurrentuser");
                     }
                 }

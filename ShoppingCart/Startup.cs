@@ -58,7 +58,6 @@ namespace ShoppingCart
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddCache();
 
             services.AddControllers(options =>
             {
